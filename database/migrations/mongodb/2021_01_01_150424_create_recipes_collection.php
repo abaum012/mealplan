@@ -14,6 +14,8 @@ class CreateRecipesCollection extends Migration
     {
         Schema::connection('mongodb')->create('recipes', function ($collection) {
             $collection->id();
+            $collection->index('name');
+            $collection->string('url');
             $collection->timestamps();
         });
     }

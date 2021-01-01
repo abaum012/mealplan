@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_MYSQL_CONNECTION'),
 
     /*
     |--------------------------------------------------------------------------
@@ -37,14 +37,11 @@ return [
 
         'mongodb' => [
             'driver' => 'mongodb',
-            'host' => 'mongo',
-            'port' => 27017,
-//            'database' => env('DB_DATABASE', 'homestead'),
-//            'username' => env('DB_USERNAME', 'homestead'),
-//            'password' => env('DB_PASSWORD', 'secret'),
-            'database' => 'mealplan',
-            'username' => 'root',
-            'password' => 'example',
+            'host' => env('DB_MONGO_HOST'),
+            'port' => env('DB_MONGO_PORT'),
+            'database' => env('DB_MONGO_DATABASE'),
+            'username' => env('DB_MONGO_USERNAME'),
+            'password' => env('DB_MONGO_PASSWORD'),
             'options' => [
                 // here you can pass more settings to the Mongo Driver Manager
                 // see https://www.php.net/manual/en/mongodb-driver-manager.construct.php under "Uri Options" for a list of complete parameters that you can use
@@ -56,11 +53,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => env('DB_MYSQL_HOST', '127.0.0.1'),
+            'port' => env('DB_MYSQL_PORT', '3306'),
+            'database' => env('DB_MYSQL_DATABASE', 'forge'),
+            'username' => env('DB_MYSQL_USERNAME', 'forge'),
+            'password' => env('DB_MYSQL_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -72,43 +69,6 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-
-//        'sqlite' => [
-//            'driver' => 'sqlite',
-//            'url' => env('DATABASE_URL'),
-//            'database' => env('DB_DATABASE', database_path('database.sqlite')),
-//            'prefix' => '',
-//            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
-//        ],
-
-//        'pgsql' => [
-//            'driver' => 'pgsql',
-//            'url' => env('DATABASE_URL'),
-//            'host' => env('DB_HOST', '127.0.0.1'),
-//            'port' => env('DB_PORT', '5432'),
-//            'database' => env('DB_DATABASE', 'forge'),
-//            'username' => env('DB_USERNAME', 'forge'),
-//            'password' => env('DB_PASSWORD', ''),
-//            'charset' => 'utf8',
-//            'prefix' => '',
-//            'prefix_indexes' => true,
-//            'schema' => 'public',
-//            'sslmode' => 'prefer',
-//        ],
-
-//        'sqlsrv' => [
-//            'driver' => 'sqlsrv',
-//            'url' => env('DATABASE_URL'),
-//            'host' => env('DB_HOST', 'localhost'),
-//            'port' => env('DB_PORT', '1433'),
-//            'database' => env('DB_DATABASE', 'forge'),
-//            'username' => env('DB_USERNAME', 'forge'),
-//            'password' => env('DB_PASSWORD', ''),
-//            'charset' => 'utf8',
-//            'prefix' => '',
-//            'prefix_indexes' => true,
-//        ],
-
     ],
 
     /*
@@ -123,43 +83,5 @@ return [
     */
 
     'migrations' => 'migrations',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Redis Databases
-    |--------------------------------------------------------------------------
-    |
-    | Redis is an open source, fast, and advanced key-value store that also
-    | provides a richer body of commands than a typical key-value system
-    | such as APC or Memcached. Laravel makes it easy to dig right in.
-    |
-    */
-
-//    'redis' => [
-//
-//        'client' => env('REDIS_CLIENT', 'phpredis'),
-//
-//        'options' => [
-//            'cluster' => env('REDIS_CLUSTER', 'redis'),
-//            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
-//        ],
-//
-//        'default' => [
-//            'url' => env('REDIS_URL'),
-//            'host' => env('REDIS_HOST', '127.0.0.1'),
-//            'password' => env('REDIS_PASSWORD', null),
-//            'port' => env('REDIS_PORT', '6379'),
-//            'database' => env('REDIS_DB', '0'),
-//        ],
-//
-//        'cache' => [
-//            'url' => env('REDIS_URL'),
-//            'host' => env('REDIS_HOST', '127.0.0.1'),
-//            'password' => env('REDIS_PASSWORD', null),
-//            'port' => env('REDIS_PORT', '6379'),
-//            'database' => env('REDIS_CACHE_DB', '1'),
-//        ],
-//
-//    ],
 
 ];
