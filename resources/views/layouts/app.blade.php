@@ -29,7 +29,10 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                <div id="app">
+                    <example-component></example-component>
+                    {{ $slot }}
+                </div>
             </main>
         </div>
     </body>
