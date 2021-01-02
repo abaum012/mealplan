@@ -22,12 +22,10 @@ class RecipeFactory extends Factory
      */
     public function definition()
     {
-        $title = $this->faker->company;
-        $slug = Str::of($title)->slug();
         return [
-            'title' => $title,
+            'title' => $title = $this->faker->company,
             'url' => $this->faker->url,
-            'slug' => $slug,
+            'slug' => Str::slug($title),
             'ingredients' => ['eggs' => 2, 'flour' => '2 cups'],
             'steps' => ['beat eggs', 'add flour'],
         ];

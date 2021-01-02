@@ -15,7 +15,7 @@
                     @foreach($recipes as $recipe)
                         <div class="border-b-2 border-gray-100 mb-3 flex justify-between">
                             <h2 class="mb-2"><a href="{{ $recipe->path() }}">{{ $recipe->title }}</a></h2>
-                            <a class="flex items-center rounded-md bg-green-500 text-white px-2 py-1 mb-2">Edit</a>
+                            <a href="{{ $recipe->path() }}/edit" class="flex items-center rounded-md bg-green-500 text-white px-2 py-1 mb-2">Edit</a>
                         </div>
                     @endforeach
                 </div>

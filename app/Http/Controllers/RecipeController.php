@@ -25,7 +25,6 @@ class RecipeController extends Controller
      */
     public function create()
     {
-        dd('test');
         return view('recipes.create');
     }
 
@@ -43,12 +42,12 @@ class RecipeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Recipe $recipe
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Recipe $recipe)
     {
-        //
+        return view('recipes.show', compact('recipe'));
     }
 
     /**

@@ -23,14 +23,12 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
-Route::resource('recipes', RecipeController::class)
-    ->only('index', 'show')
-    ->name('index', 'recipes');
-
 Route::middleware('auth')->group(function() {
     Route::resource('recipes', RecipeController::class)
         ->only('create','store','edit','update','destroy');
 });
-
+Route::resource('recipes', RecipeController::class)
+    ->only('index', 'show')
+    ->name('index', 'recipes');
 
 require __DIR__.'/auth.php';
