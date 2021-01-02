@@ -30,7 +30,6 @@
             <!-- Page Content -->
             <main>
                 <div id="app">
-                    <example-component></example-component>
                     {{ $slot }}
                 </div>
             </main>

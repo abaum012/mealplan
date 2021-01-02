@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Recipe;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class RecipeFactory extends Factory
 {
@@ -21,9 +22,12 @@ class RecipeFactory extends Factory
      */
     public function definition()
     {
+        $title = $this->faker->company;
+        $slug = Str::of($title)->slug();
         return [
-            'title' => $this->faker->company,
+            'title' => $title,
             'url' => $this->faker->url,
+            'slug' => $slug,
             'ingredients' => ['eggs' => 2, 'flour' => '2 cups'],
             'steps' => ['beat eggs', 'add flour'],
         ];

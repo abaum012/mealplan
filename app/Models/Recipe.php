@@ -23,4 +23,9 @@ class Recipe extends Model
         'ingredients',
         'steps',
     ];
+
+    public function path()
+    {
+        return "/recipes/{ $this->title }";
+    }
 }

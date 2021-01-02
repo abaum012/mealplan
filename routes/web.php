@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\RecipeController as RecipeControllerAlias;
+use App\Http\Controllers\RecipeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,8 +22,14 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+
+Route::resource('recipes', RecipeController::class)
+    ->only('index', 'show')
+    ->name('index', 'recipes');
+
 Route::middleware('auth')->group(function() {
-    Route::resource('recipes', RecipeControllerAlias::class);
+    Route::resource('recipes', RecipeController::class)
+        ->only('create','store','edit','update','destroy');
 });
 
 
