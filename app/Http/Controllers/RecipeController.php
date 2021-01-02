@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Recipe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class RecipeController extends Controller
 {
@@ -36,7 +37,12 @@ class RecipeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = $request->request->all();
+        $attributes['slug'] = Str::slug($attributes['title']);
+
+        Recipe::create($attributes);
+
+        return redirect('/recipes');
     }
 
     /**
