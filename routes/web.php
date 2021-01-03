@@ -14,16 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/{any?}', function () {
+    return view('app');
 });
 
-Route::middleware('auth')->group(function() {
-    Route::resource('recipes', RecipeController::class)
-        ->only('create','store','edit','update','destroy');
-});
-Route::resource('recipes', RecipeController::class)
-    ->only('index', 'show')
-    ->name('index', 'recipes');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+//Route::middleware('auth')->group(function() {
+//    Route::resource('recipes', RecipeController::class)
+//        ->only('create','store','edit','update','destroy');
+//});
+//Route::resource('recipes', RecipeController::class)
+//    ->only('index', 'show')
+//    ->name('index', 'recipes');
 
 require __DIR__.'/auth.php';

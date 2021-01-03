@@ -1,12 +1,14 @@
-require('./bootstrap');
-
 import { createApp } from 'vue'
-import ExampleComponent from "./components/ExampleComponent";
+import { createRouter, createWebHistory } from 'vue-router'
+import routes from './routes'
 
-createApp({
-    components: {
-        ExampleComponent,
-    }
-}).mount('#app')
+const router = createRouter({
+    history: createWebHistory(),
+    routes: routes,
+})
 
-require('alpinejs');
+const app = createApp({})
+
+app.use(router)
+
+app.mount('#app')
