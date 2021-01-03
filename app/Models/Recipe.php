@@ -20,9 +20,9 @@ class Recipe extends Model
     protected $fillable = [
         'title',
         'url',
+        'slug',
         'ingredients',
         'steps',
-        'slug',
     ];
 
     /**

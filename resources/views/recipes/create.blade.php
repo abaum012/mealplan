@@ -78,13 +78,13 @@
                                     <div class="inline-flex">
                                         <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"></svg>
                                         <select class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 mt-1 hover:border-gray-400 focus:outline-none appearance-none" name="ingredients[0][category]">
-                                            <option value="">Produce</option>
-                                            <option value="">Deli/Meats</option>
-                                            <option value="">Aisles</option>
-                                            <option value="">Frozen</option>
-                                            <option value="">Dairy</option>
-                                            <option value="">Snacks</option>
-                                            <option value="">Household</option>
+                                            <option value="produce">Produce</option>
+                                            <option value="meats">Deli/Meats</option>
+                                            <option value="aisles">Aisles</option>
+                                            <option value="frozen">Frozen</option>
+                                            <option value="dairy">Dairy</option>
+                                            <option value="snacks">Snacks</option>
+                                            <option value="household">Household</option>
                                         </select>
                                     </div>
                                 </div>
