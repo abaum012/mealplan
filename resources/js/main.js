@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import App from './App.vue'
 import routes from './routes'
 import axios from 'axios'
 
@@ -12,8 +13,6 @@ const router = createRouter({
     linkActiveClass: 'nav-link-active',
 })
 
-const app = createApp({})
-
-app.use(router)
-
-app.mount('#app')
+createApp(App)
+    .use(router)
+    .mount('#app')
