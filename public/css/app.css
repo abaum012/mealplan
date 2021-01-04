@@ -828,6 +828,10 @@ h2 {
   transition-duration: 150ms;
 }
 
+header {
+  min-height: 80px;
+}
+
 .container {
   width: 100%;
 }

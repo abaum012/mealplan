@@ -35,8 +35,8 @@ class Recipe extends Model
         return 'slug';
     }
 
-    public function path()
-    {
-        return "/recipes/{$this->slug}";
-    }
+//    public function path()
+//    {
+//        return "/recipes/{$this->slug}";
+//    }
 }

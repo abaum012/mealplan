@@ -14,20 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{any?}', function () {
+Route::get('/{any}', function () {
     return view('app');
-});
-
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-//Route::middleware('auth')->group(function() {
-//    Route::resource('recipes', RecipeController::class)
-//        ->only('create','store','edit','update','destroy');
-//});
-//Route::resource('recipes', RecipeController::class)
-//    ->only('index', 'show')
-//    ->name('index', 'recipes');
+})->where('any', '.*');
 
 require __DIR__.'/auth.php';

@@ -15,4 +15,7 @@
     .nav-link-active {
         @apply border-indigo-400 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out;
     }
+    header {
+        min-height: 80px;
+    }
 }

@@ -32,13 +32,13 @@
                             </div>
 
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <router-link class="nav-link" active-class="nav-link-active" to="/">
+                                <router-link class="nav-link" to="/">
                                     Home
                                 </router-link>
                             </div>
 
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <router-link class="nav-link" active-class="nav-link-active" to="/recipes">
+                                <router-link class="nav-link" to="/recipes">
                                     Recipes
                                 </router-link>
                             </div>
@@ -47,30 +47,8 @@
                 </div>
             </nav>
 
-        <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between">
-                        <h2 class="font-semibold text-xl text-gray-800 leading-tight align-middle">
-                            {{ __('Recipes') }}
-                        </h2>
-{{--                        <a href="/recipes/create" class="flex items-center rounded-md bg-blue-500 text-white px-2 py-1">Add</a>--}}
-                    </div>
-                </div>
-            </header>
+            <router-view></router-view>
 
-            <!-- Page Content -->
-            <main>
-                <div class="py-12">
-                    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                            <div class="p-6 bg-white border-b border-gray-200">
-                                <router-view></router-view>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
         </div>
     </body>
 </html>
