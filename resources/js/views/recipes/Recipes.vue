@@ -19,11 +19,11 @@
 
 <script>
 export default {
-    name: "Recipes",
+    name: 'Recipes',
+
     data() {
         return {
-            title: '',
-            recipes: {}
+            recipes: {},
         }
     },
 

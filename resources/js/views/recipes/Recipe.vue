@@ -22,7 +22,7 @@
 
 <script>
 export default {
-    name: "Recipe",
+    name: 'Recipe',
     data() {
         return {
             recipe: {}
