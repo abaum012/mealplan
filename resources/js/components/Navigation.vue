@@ -30,7 +30,7 @@
 import Logo from "./Logo"
 
 export default {
-    name: "Navigation",
+    name: 'Navigation',
     components: {
         Logo,
     },

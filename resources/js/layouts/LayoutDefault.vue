@@ -1,6 +1,6 @@
 <template>
     <navigation></navigation>
-    <page-header></page-header>
+
     <main>
         <slot></slot>
     </main>
@@ -9,13 +9,11 @@
 
 <script>
 import Navigation from "../components/Navigation";
-import PageHeader from "../components/PageHeader";
 
 export default {
     name: "LayoutDefault",
     components: {
-        Navigation,
-        PageHeader
+        Navigation
     }
 }
 </script>
