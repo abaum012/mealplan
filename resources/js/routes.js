@@ -1,8 +1,11 @@
+import NotFound from "./views/NotFound"
 import Welcome from "./views/Welcome"
+import LayoutDefault from "./layouts/LayoutDefault";
+
 import Recipes from "./views/recipes/Recipes"
 import Recipe from "./views/recipes/Recipe"
-import NotFound from "./views/NotFound"
-import LayoutDefault from "./layouts/LayoutDefault";
+import CreateRecipe from "./views/recipes/CreateRecipe"
+
 
 export default [
     {
@@ -28,5 +31,11 @@ export default [
         path: '/recipes/:slug',
         component: Recipe,
         meta: { layout: LayoutDefault }
-    }
+    },
+
+    {
+        path: '/recipes/create',
+        component: CreateRecipe,
+        meta: { layout: LayoutDefault }
+    },
 ]
