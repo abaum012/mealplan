@@ -1,6 +1,6 @@
 <template>
     <page-header title="Recipes">
-        <router-link to="/recipes/create" class="flex items-center rounded-md bg-blue-500 text-white px-2 py-1">Add</router-link>
+        <router-link to="/recipes/create" class="button bg-blue-500">Add</router-link>
     </page-header>
 
     <div class="py-12">
@@ -13,7 +13,7 @@
                                 {{ recipe.title }}
                             </router-link>
                         </h2>
-                        <router-link :to="'/recipes/'+ recipe.slug +'/edit'" class="flex items-center rounded-md bg-green-500 text-white px-2 py-1 mb-2">Edit</router-link>
+                        <router-link :to="'/recipes/'+ recipe.slug +'/edit'" class="button">Edit</router-link>
                     </div>
                 </div>
             </div>
