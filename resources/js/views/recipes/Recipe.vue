@@ -14,7 +14,7 @@
             <div class="p-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                 <h2>Directions:</h2>
                 <ol class="list-decimal ml-5">
-                    <li v-for="step in recipe.steps" v-text="step" class="mb-1"></li>
+                    <li v-for="direction in recipe.directions" v-text="direction" class="mb-1"></li>
                 </ol>
             </div>
         </div>
@@ -29,7 +29,7 @@ export default {
     components: {
         PageHeader
     },
-    
+
     data() {
         return {
             recipe: {}

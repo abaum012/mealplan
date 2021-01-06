@@ -1,5 +1,7 @@
 <template>
-    <page-header title="Recipes"></page-header>
+    <page-header title="Recipes">
+        <router-link to="/recipes/create" class="flex items-center rounded-md bg-blue-500 text-white px-2 py-1">Add</router-link>
+    </page-header>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">

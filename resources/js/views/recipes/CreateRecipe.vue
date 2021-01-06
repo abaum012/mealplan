@@ -18,7 +18,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="p-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                 <h2>Directions:</h2>
-                <text-area-input v-model="form.directions" name="steps"></text-area-input>
+                <text-area-input v-model="form.directions" name="directions"></text-area-input>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@ export default {
                 title: '',
                 url: '',
                 ingredients: '',
-                steps: '',
+                directions: '',
             })
         }
     },

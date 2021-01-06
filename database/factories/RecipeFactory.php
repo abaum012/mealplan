@@ -42,7 +42,7 @@ class RecipeFactory extends Factory
                 ['name' => 'bay leaf', 'amount' => 1, 'category' => 'produce'],
                 ['name' => 'parsley', 'amount' => 2, 'unit' => 'tablespoon', 'memo' => 'chopped', 'category' => 'produce'],
             ],
-            'steps' => [
+            'directions' => [
                 'In a large saucepan of 2 cups water, cook rice according to package instructions; set aside.',
                 'Heat vegetable oil in a large stockpot or Dutch oven over medium heat. Working in batches, add sausage, and cook, stirring frequently, until sausage is lightly browned, about 3-4 minutes; set aside.',
                 'Add onion, bell pepper and celery. Cook, stirring occasionally, until tender, about 3-4 minutes.',
