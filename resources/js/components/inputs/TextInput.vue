@@ -1,7 +1,6 @@
 <template>
     <div class="mb-4">
-        <label class="block font-medium text-sm text-gray-700 capitalize" v-text="name">
-        </label>
+        <label v-text="name" class="block font-medium text-sm text-gray-700 capitalize"></label>
         <input
             :value="modelValue"
             @input="$emit('update:modelValue', $event.target.value)"

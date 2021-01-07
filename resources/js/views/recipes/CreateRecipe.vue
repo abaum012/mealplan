@@ -14,6 +14,7 @@
                 <h2 class="mb-6">Ingredients:</h2>
                 <IngredientInput
                     v-for="(ingredient, index) in ingredients"
+                    :key="ingredient.id"
                     v-model="ingredients[index]"
                     @remove-ingredient="removeIngredient(index)">
                 </IngredientInput>
@@ -28,6 +29,7 @@
                 <h2 class="mb-6">Directions:</h2>
                     <DirectionInput
                         v-for="(direction, index) in directions"
+                        :key="directions.id"
                         v-model="directions[index]"
                         :index="index"
                         @remove-direction="removeDirection(index)">
