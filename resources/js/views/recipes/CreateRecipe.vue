@@ -12,6 +12,14 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="p-6 mb-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                 <h2 class="mb-6">Ingredients:</h2>
+                <IngredientInput
+                    v-for="(ingredient, index) in ingredients"
+                    v-model="ingredients[index]"
+                    @remove-ingredient="removeIngredient(index)">
+                </IngredientInput>
+                <div class="flex">
+                    <button class="button flex-grow justify-center py-2 mx-12 border-2 border-green-500 bg-white text-green-800" @click="addIngredient">Add Ingredient</button>
+                </div>
             </div>
         </div>
 
@@ -24,7 +32,9 @@
                         :index="index"
                         @remove-direction="removeDirection(index)">
                     </DirectionInput>
-                <button class="button" @click="addDirection">Add Step</button>
+                <div class="flex">
+                    <button class="button flex-grow justify-center py-2 mx-12 border-2 border-green-500 bg-white text-green-800" @click="addDirection">Add Step</button>
+                </div>
             </div>
         </div>
     </div>
@@ -34,6 +44,7 @@
 import PageHeader from "../../components/PageHeader"
 import TextInput from "../../components/inputs/TextInput"
 import DirectionInput from "../../components/inputs/DirectionInput"
+import IngredientInput from "../../components/inputs/IngredientInput"
 
 export default {
     name: 'CreateRecipe',
@@ -42,7 +53,13 @@ export default {
         return {
             title: '',
             url: '',
-            ingredients: [],
+            ingredients: [{
+                amount: '',
+                units: '',
+                name: '',
+                memo: '',
+                category: '',
+            }],
             directions: [''],
         }
     },
@@ -50,16 +67,32 @@ export default {
     components: {
         PageHeader,
         TextInput,
-        DirectionInput
+        DirectionInput,
+        IngredientInput
     },
 
     methods: {
+        // ripe for refactor
         addDirection() {
             this.directions.push('')
         },
 
         removeDirection(index) {
             this.directions.splice(index, 1);
+        },
+
+        addIngredient() {
+            this.ingredients.push({
+                amount: '',
+                units: '',
+                name: '',
+                memo: '',
+                category: '',
+            })
+        },
+
+        removeIngredient(index) {
+            this.ingredients.splice(index, 1);
         }
     }
 }

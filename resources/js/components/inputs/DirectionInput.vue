@@ -12,7 +12,10 @@
             ></textarea>
         </div>
         <div class="mb-4 flex">
-            <button class="rounded-md shadow-sm bg-red-500 text-white h-8 w-8 mt-6" @click="$emit('removeDirection')">&times</button>
+            <button class="rounded-md shadow-sm bg-red-500 text-white h-8 w-8 mt-6 disabled:opacity-50"
+                    @click="$emit('removeDirection')">
+                    &times
+            </button>
         </div>
     </div>
 </template>
