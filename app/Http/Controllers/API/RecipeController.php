@@ -31,7 +31,7 @@ class RecipeController extends Controller
         $attributes['slug'] = Str::slug($attributes['title']);
 
         Recipe::create($attributes);
-        // return somthing
+        // return something
     }
 
     /**

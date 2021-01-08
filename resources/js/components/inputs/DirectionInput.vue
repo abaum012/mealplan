@@ -8,12 +8,15 @@
                 :value="modelValue"
                 @input="$emit('update:modelValue', $event.target.value)"
 
-                class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block mt-1 w-full"
+                class="rounded-md shadow-sm border-gray-300 bg-gray-50 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block mt-1 w-full"
             ></textarea>
         </div>
         <div class="mb-4 flex">
-            <button class="rounded-md shadow-sm bg-red-500 text-white h-8 w-8 mt-6 disabled:opacity-50"
-                    @click="$emit('removeDirection')">
+            <button
+                class="rounded-md shadow-sm bg-red-500 text-white h-8 w-8 mt-6 disabled:opacity-50"
+                type="button"
+                tabindex="-1"
+                @click="$emit('removeDirection')">
                     &times
             </button>
         </div>

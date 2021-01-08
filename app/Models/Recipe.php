@@ -22,7 +22,7 @@ class Recipe extends Model
         'url',
         'slug',
         'ingredients',
-        'steps',
+        'directions',
     ];
 
     /**

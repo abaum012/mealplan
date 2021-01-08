@@ -20,5 +20,6 @@
 export default {
     name: 'DropdownInput',
     props: ['name', 'options', 'required', 'modelValue'],
+    emits: ['update:modelValue']
 }
 </script>
