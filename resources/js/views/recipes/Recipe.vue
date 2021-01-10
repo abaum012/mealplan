@@ -6,7 +6,7 @@
                 <h2>Ingredients:</h2>
                 <ul class="list-disc ml-5">
                     <li v-for="ingredient in recipe.ingredients" class="mb-1">
-                        {{ ingredient.amount }} {{ ingredient.name }} {{ ingredient.unit }} {{ ingredient.memo }}
+                        {{ ingredient.amount }} {{ ingredient.unit }} {{ ingredient.name }} {{ ingredient.memo }}
                     </li>
                 </ul>
             </div>
