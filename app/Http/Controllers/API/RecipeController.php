@@ -30,8 +30,9 @@ class RecipeController extends Controller
         $attributes = $request->request->all();
         $attributes['slug'] = Str::slug($attributes['title']);
 
-        Recipe::create($attributes);
-        // return something
+        $recipe = Recipe::create($attributes);
+
+        return response(['success' => true, 'message' => $recipe->title . ' created!']);
     }
 
     /**
@@ -60,11 +61,12 @@ class RecipeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Recipe  $recipe
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Recipe $recipe)
     {
-        //
+        $recipe->delete();
+        return response(['success' => true, 'message' => $recipe->title . ' removed!']);
     }
 }

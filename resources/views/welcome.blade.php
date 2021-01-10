@@ -21,6 +21,7 @@
             <div>
                 <h1>Welcome Page</h1>
                 <p>This page will eventually be the front end of a larger project. For now we'll just leave this here.</p>
+                <small>By the way, this page is still a laravel blade template...</small>
             </div>
 
         </div>
