@@ -3,6 +3,8 @@ This project is a simple recipe store and meal planner system for Kelsey and I. 
 
 The project is being used to check out Laravel's new docker/container environment and to catch up on the Vue 3 changes and make a Single Page Application. 
 
+https://trello.com/b/B599C94B
+
 ## Backend
 - Laravel
     - Laravel Sail
