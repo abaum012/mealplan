@@ -81,27 +81,27 @@ export default {
     data () {
         return {
             units: [
-                { value: '', label: '' },
-                { value: 'tsp', label: 'teaspoon' },
-                { value: 'Tbsp', label: 'tablespoon' },
-                { value: 'oz', label: 'ounce' },
-                { value: 'cup', label: 'cup' },
-                { value: 'pint', label: 'pint' },
-                { value: 'quart', label: 'quart' },
-                { value: 'lb', label: 'pounds' },
-                { value: 'clove', label: 'clove' },
-                { value: 'stalk', label: 'stalk' },
-                { value: 'dash', label: 'dash' },
+                '',
+                'teaspoon',
+                'tablespoon',
+                'ounce',
+                'cup',
+                'pint',
+                'quart',
+                'pounds',
+                'clove',
+                'stalk',
+                'dash',
             ],
 
             categories: [
-                { value:'produce', label: 'Produce' },
-                { value:'meats', label: 'Deli/Meats' },
-                { value:'aisles', label: 'Aisles' },
-                { value:'frozen', label: 'Frozen' },
-                { value:'dairy', label: 'Dairy' },
-                { value:'snacks', label: 'Snacks' },
-                { value:'household', label: 'Household' },
+                'Produce',
+                'Deli/Meats',
+                'Aisles',
+                'Frozen',
+                'Dairy',
+                'Snacks',
+                'Household',
             ]
         }
     }

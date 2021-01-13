@@ -18,19 +18,19 @@
                         <div class="flex">
                             <router-link
                                 :to="'/recipes/' + recipe.slug"
-                                class="button bg-white border border-green-600 text-gray-700 hover:bg-green-500 hover:text-white mr-4">
+                                class="button bg-white border border-green-600 text-gray-700 hover:bg-green-50 mr-4">
                                 View
                             </router-link>
 
                             <router-link
                                 :to="'/recipes/'+ recipe.slug +'/edit'"
-                                class="button bg-white border-yellow-500 border text-gray-700 hover:bg-yellow-400 hover:text-white mr-4">
+                                class="button bg-white border-yellow-500 border text-gray-700 hover:bg-yellow-50 mr-4">
                                 Edit
                             </router-link>
 
                             <button
                                 v-on:click="deleteRecipe(recipe)"
-                                class="button bg-white border border-red-700 text-gray-600 hover:bg-red-500 hover:text-white">
+                                class="button bg-white border border-red-700 text-gray-600 hover:bg-red-100">
                                 Delete
                             </button>
                         </div>

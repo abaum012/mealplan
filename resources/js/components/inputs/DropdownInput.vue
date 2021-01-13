@@ -10,8 +10,9 @@
             <option
                 v-for="option in options"
                 :key="option.id"
-                :value="option.value"
-                v-text="option.label"></option>
+                :value="option"
+                :selected="option === modelValue"
+                v-text="option"></option>
         </select>
     </div>
 </template>

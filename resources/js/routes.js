@@ -5,6 +5,7 @@ import LayoutDefault from "./layouts/LayoutDefault";
 import Recipes from "./views/recipes/Recipes"
 import Recipe from "./views/recipes/Recipe"
 import CreateRecipe from "./views/recipes/CreateRecipe"
+import EditRecipe from "./views/recipes/EditRecipe"
 
 
 export default [
@@ -36,6 +37,12 @@ export default [
     {
         path: '/recipes/create',
         component: CreateRecipe,
+        meta: { layout: LayoutDefault }
+    },
+
+    {
+        path: '/recipes/:slug/edit',
+        component: EditRecipe,
         meta: { layout: LayoutDefault }
     },
 ]
