@@ -16582,7 +16582,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       this.errors = {};
-      axios.post('/api/recipes', this).then(this.$router.push({
+      axios.patch('/api/recipes' + this.$route.params.slug, this).then(this.$router.push({
         path: 'recipes'
       }))["catch"](function (error) {
         return _this2.errors.record(error.response.data);

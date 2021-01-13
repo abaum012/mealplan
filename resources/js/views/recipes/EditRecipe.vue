@@ -103,7 +103,7 @@ export default {
     methods: {
         onSubmit() {
             this.errors = {}
-            axios.post('/api/recipes', this)
+            axios.patch('/api/recipes' + this.$route.params.slug, this)
                 .then(this.$router.push({ path: 'recipes' }))
                 .catch(error => this.errors.record(error.response.data))
         },
